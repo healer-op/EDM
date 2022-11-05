@@ -20,15 +20,15 @@ fetch('https://script.google.com/macros/s/AKfycbwpTWEeLHdIQisqXL_dpF9NgQExZ9DAJh
 
 
     for(var i=0;i<length;i++){
-        if(datas[i].tier==1 && datas.Stock!="X"){
+        if(datas[i].tier==1 && datas[i].Stock!="X"){
             data1[j1]=datas[i];
             j1++;
         }
-        if(datas[i].tier==2 && datas.Stock!="X"){
+        if(datas[i].tier==2 && datas[i].Stock!="X"){
             data2[j2]=datas[i];
             j2++;
         }
-        if(datas[i].tier==3 && datas.Stock!="X"){
+        if(datas[i].tier==3 && datas[i].Stock!="X"){
             data3[j3]=datas[i]
             j3++;
         }
