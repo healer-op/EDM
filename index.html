@@ -1,386 +1,83 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-</html>
-
-
-<head>
-    <title>Exclusive Deluxe MotorSport</title>
-    <meta property="og:title" content="BBRP - Exclusive Deluxe MotorSport">
-    <meta property="og:description" content="Official Website for Exclusive Deluxe MotorSport Catalog">
-    <meta property="og:image"
-        content="https://www.gtabase.com/igallery/8701-8800/gta-online-importexport-artwork-png-8749-1600.png">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/album/">
-
-
-
-
-
-    <link href="css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" href="https://www.gtabase.com/igallery/8701-8800/gta-online-importexport-artwork-png-8749-1600.png" sizes="180x180">
-    <link rel="icon" href="https://www.gtabase.com/igallery/8701-8800/gta-online-importexport-artwork-png-8749-1600.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="https://www.gtabase.com/igallery/8701-8800/gta-online-importexport-artwork-png-8749-1600.png" sizes="16x16" type="image/png">
-    <link rel="icon" href="https://www.gtabase.com/igallery/8701-8800/gta-online-importexport-artwork-png-8749-1600.png">
-    <meta name="theme-color" content="#712cf9">
-
-
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Exclusive Deluxe MotorSport</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="https://www.gtabase.com/igallery/8701-8800/gta-online-importexport-artwork-png-8749-1600.png" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
     <style>
-        html {
-            cursor: url(IMAGES/cursor.png), url(IMAGES/cursor.png), auto;
-        }
-
-        header {
-            position: relative;
-            background-color: black;
-            height: 75vh;
-            min-height: 25rem;
+        #loading {
+            position: fixed;
             width: 100%;
-            overflow: hidden;
+            height: 100vh;
+            background: #fff url('https://cdn.dribbble.com/users/255512/screenshots/2251246/gifloader.gif') no-repeat center center;
+            z-index: 999999;
         }
-
-        header video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: 0;
-            -ms-transform: translateX(-50%) translateY(-50%);
-            -moz-transform: translateX(-50%) translateY(-50%);
-            -webkit-transform: translateX(-50%) translateY(-50%);
-            transform: translateX(-50%) translateY(-50%);
-        }
-
-        header .container {
-            position: relative;
-            z-index: 2;
-        }
-
-        header .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            background-color: black;
-            opacity: 0.5;
-            z-index: 1;
-        }
-
-        /* Media Query for devices withi coarse pointers and no hover functionality */
-
-        /* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
-
-        @media (pointer: coarse) and (hover: none) {
-            header {
-                background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
-            }
-
-            header video {
-                display: none;
-            }
-        }
-
-        .nav-scroller {
-            position: relative;
-            z-index: 2;
-            height: 2.75rem;
-            overflow-y: hidden;
-        }
-
-        .nav-scroller .nav {
-            display: flex;
-            flex-wrap: nowrap;
-            padding-bottom: 1rem;
-            margin-top: -1px;
-            overflow-x: auto;
-            text-align: center;
-            white-space: nowrap;
-            -webkit-overflow-scrolling: touch;
-        }
-        @media (max-width: 576px) {  
-  .xs {color:red;font-weight:bold;}
-}
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width:768px) {  
-  .sm {color:red;font-weight:bold;}
-}
- 
-/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-@media (min-width: 768px) and (max-width:992px) {  
- .md {color:red;font-weight:bold;}
-}
- 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width:1200px) { 
- .lg {color:red;font-weight:bold;}
-}
- 
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {  
-    .xl {color:red;font-weight:bold;}
-}
- 
     </style>
-
-
-</head>
-<style>
-    #loading {
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: #fff url('https://cdn.dribbble.com/users/255512/screenshots/2251246/gifloader.gif') no-repeat center center;
-        z-index: 999999;
-    }
-</style>
-
-<body onload="myFunction()">
-    <div id="loading">
-    </div>
-    <script>
-        // $(document).ready(function(){
-        // 	$('div#loading').removeAttr('id');
-        // });
-        var preloader = document.getElementById("loading");
-        // window.addEventListener('load', function(){
-        // 	preloader.style.display = 'none';
-        // 	})
-
-        function myFunction() {
-            setTimeout(function () {
-                preloader.style.display = 'none';
-            }, 2000);
-        };
-    </script>
-
-
-    <header>
-
-        <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
-        <div class="overlay"></div>
-
-        <!-- The HTML5 video element that will create the background video on the header -->
-        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-            <source
-                src="https://cdn.discordapp.com/attachments/1036219072246972426/1037610683199660042/GTA_V_NVR_Cinematic_Edit_-_7K_Subs_Special_Teaser.mp4"
-                type="video/mp4">
-        </video>
-
-        <!-- The header content -->
-        <div class="container h-100">
-            <div class="d-flex h-100 text-center align-items-center">
-                <div class="w-100 text-white">
-                    <img src="https://cdn.discordapp.com/attachments/1036219072246972426/1036512865319923712/20220928_170910.png" style="transform: rotate(-3deg)"
-                        width="420px">
+    
+    <body onload="myFunction()">
+        <div id="loading">
+        </div>
+        <script>
+            // $(document).ready(function(){
+            // 	$('div#loading').removeAttr('id');
+            // });
+            var preloader = document.getElementById("loading");
+            // window.addEventListener('load', function(){
+            // 	preloader.style.display = 'none';
+            // 	})
+    
+            function myFunction() {
+                setTimeout(function () {
+                    preloader.style.display = 'none';
+                }, 2000);
+            };
+        </script>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#!">Exclusive Deluxe MotorSport</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Tier 1</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Tier 2</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Tier 3</a></li>
+                        
+                    </ul> -->
                 </div>
             </div>
-        </div>
-    </header>
-
-    
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <!-- Container wrapper -->
-        <div class="container-fluid">
-            <!-- Toggle button -->
-            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
-                data-mdb-target="#navbarCenteredExample" aria-controls="navbarCenteredExample" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-
-            <!-- Collapsible wrapper -->
-            <div class="collapse navbar-collapse justify-content-center" id="navbarCenteredExample">
-                <!-- Left links -->
-                <ul class="navbar-nav mb-2 mb-lg-0">
-
-                    <li class="nav-item active">
-                        <a class="nav-link" aria-current="page" onclick="tair1()">Tier 1</a>
-                    </li>
-
-                    <li class="nav-item active">
-                        <a class="nav-link" aria-current="page" onclick="tair2()">Tier 2</a>
-                    </li>
-
-                    <li class="nav-item active">
-                        <a class="nav-link" aria-current="page" onclick="tair3()">Tier 3</a>
-                    </li>
-                  
-                </ul>
-                <!-- Left links -->
+        </nav>
+        <!-- Product section-->
+        <section class="py-5" id="limited">
+            
+        </section>
+        <!-- Related items section-->
+        <section class="py-5 bg-light">
+            <div class="container px-4 px-lg-5 mt-5">
+                <h2 class="fw-bolder mb-4">Related products</h2>
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center" id="one">
+                    
+                    
+                </div>
             </div>
-            <!-- Collapsible wrapper -->
-        </div>
-        <!-- Container wrapper -->
-    </nav>
-
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
-        <div class="col mb-4">
-          <div class="card">
-            <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col mb-4">
-          <div class="card">
-            <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col mb-4">
-          <div class="card">
-            <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col mb-4">
-          <div class="card">
-            <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col mb-4">
-          <div class="card">
-            <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col mb-4">
-          <div class="card">
-            <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col mb-4">
-          <div class="card">
-            <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col mb-4">
-          <div class="card">
-            <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col mb-4">
-          <div class="card">
-            <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col mb-4">
-          <div class="card">
-            <img src="https://dummyimage.com/600x400/000/fff.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    <div class="card-group">
-
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="tair1">
-
-
-            </div>
-
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="tair2">
-
-
-            </div>
-
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="tair3">
-
-
-            </div>
-
-    </main>
-
-    <footer class="text-muted py-5">
-        <div class="container">
-            <div style="display: flex;">
-                <a onclick="tair1();" style="color:blue"> Tier 1 &nbsp</a> |&nbsp
-                <a onclick="tair2();" style="color:blue"> Tier 2 &nbsp</a> |&nbsp
-                <a onclick="tair3();" style="color:blue"> Tier 3 &nbsp</a> |&nbsp
-            </div>
-            <p class="float-end mb-1">
-                <a href="#">Back to top</a>
-            </p>
-            <p class="mb-1">Exclusive Deluxe MotorSport | BBRP</p>
-            <p class="mb-0">Made with 💖 <a href="https://github.com/healer-op">Healer#0088</a></p>
-        </div>
-    </footer>
-
-
-    <script src="js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
-    </script>
-    <script src="js/compact.js"></script>
-
-    <script>
-        const audioElement = new Audio('src_assets_beep.mp3');
-        document.getElementById("tair2").style.display = "none";
-        document.getElementById("tair3").style.display = "none";
-        function tair1(){
-            audioElement.play();
-            document.getElementById("tair1").style.display = "flex";
-            document.getElementById("tair2").style.display = "none";
-            document.getElementById("tair3").style.display = "none";
-        }
-        function tair2(){
-            audioElement.play();
-            document.getElementById("tair1").style.display = "none";
-            document.getElementById("tair2").style.display = "flex";
-            document.getElementById("tair3").style.display = "none";
-        }
-        function tair3(){
-            audioElement.play();
-            document.getElementById("tair1").style.display = "none";
-            document.getElementById("tair2").style.display = "none";
-            document.getElementById("tair3").style.display = "flex";
-        }
-    </script>
-
-
-</body>
-
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; BBRP 2022</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="js/compact.js"></script>
+    </body>
 </html>
