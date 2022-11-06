@@ -10,22 +10,34 @@ fetch('https://script.google.com/macros/s/AKfycbwpTWEeLHdIQisqXL_dpF9NgQExZ9DAJh
     // console.log(data[0]);
     let length = datas.length;
     let j1=0;
+    let j2=0;
+    let j3=0;
 
 
     let data=[];
     let data1 = [];
+    let data2 = [];
+    let data3 = [];
 
 
     for(var i=0;i<length;i++){
-        if(datas[i].tier=4){
+        if(datas[i].tier==4){
             data[0]=datas[i];
         }
     }
 
     for(var i=0;i<length;i++){
-        if(datas[i].Stock=="✅"){
+        if(datas[i].Stock=="✅" && datas[i].tier==1){
             data1[j1]=datas[i];
             j1++;
+        }
+        if(datas[i].Stock=="✅" && datas[i].tier==2){
+            data2[j2]=datas[i];
+            j2++;
+        }
+        if(datas[i].Stock=="✅" && datas[i].tier==3){
+            data3[j3]=datas[i];
+            j3++;
         }
     }
 
@@ -66,7 +78,8 @@ fetch('https://script.google.com/macros/s/AKfycbwpTWEeLHdIQisqXL_dpF9NgQExZ9DAJh
                                     <!-- Product name-->
                                     <h5 class="fw-bolder">${data1[i].Car_made} ${data1[i].Model_Name}</h5>
                                     <!-- Product price-->
-                                    ₹ ${data1[i].Price}<br>
+                                    <span class="text-decoration-line-through">₹ ${(data1[i].Price)+500}</span>
+                                    <b>₹ ${data1[i].Price}</b><br>
                                     ${data1[i].SpawnCode}
                                 </div>
                             </div>
@@ -74,5 +87,49 @@ fetch('https://script.google.com/macros/s/AKfycbwpTWEeLHdIQisqXL_dpF9NgQExZ9DAJh
                     </div>`
     }).join('');
     document.querySelector("#one").insertAdjacentHTML("afterbegin", html1);
+
+    const html2 = data2.map((img, i) =>{
+        return `
+        <div class="col mb-5" onclick="clicksound.play();">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="${data2[i].Picture}" alt="${data2[i].Car_made}.png" />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">${data2[i].Car_made} ${data2[i].Model_Name}</h5>
+                                    <!-- Product price-->
+                                    <span class="text-decoration-line-through">₹ ${(data2[i].Price)+500}</span>
+                                    <b>₹ ${data2[i].Price}</b><br>
+                                    ${data2[i].SpawnCode}
+                                </div>
+                            </div>
+                        </div>
+                    </div>`
+    }).join('');
+    document.querySelector("#two").insertAdjacentHTML("afterbegin", html2);
+
+    const html3 = data3.map((img, i) =>{
+        return `
+        <div class="col mb-5" onclick="clicksound.play();">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="${data3[i].Picture}" alt="${data3[i].Car_made}.png" />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">${data3[i].Car_made} ${data3[i].Model_Name}</h5>
+                                    <!-- Product price-->
+                                    <span class="text-decoration-line-through">₹ ${(data3[i].Price)+500}</span>
+                                    <b>₹ ${data3[i].Price}</b><br>
+                                    ${data3[i].SpawnCode}
+                                </div>
+                            </div>
+                        </div>
+                    </div>`
+    }).join('');
+    document.querySelector("#three").insertAdjacentHTML("afterbegin", html3);
 })
 
