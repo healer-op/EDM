@@ -58,7 +58,7 @@ fetch('https://script.google.com/macros/s/AKfycbwpTWEeLHdIQisqXL_dpF9NgQExZ9DAJh
                         </div>
                         <p class="lead">
                         <u><B class="fw-bolder">Limited Time Only!</B></u> Grab <b>${data[0].Car_made} ${data[0].Model_Name}</b>
-                         With Seating Capacity of <b>${data[0].Capacity}</b> Players
+                         With Seating Capacity of <i class="fa-solid fa-chair"></i> <b>${data[0].Capacity}</b> Players
                           At a Limited Sale Price of <b>₹ ${data[0].Price}</b></p>
                     </div>
                 </div>
@@ -78,6 +78,7 @@ fetch('https://script.google.com/macros/s/AKfycbwpTWEeLHdIQisqXL_dpF9NgQExZ9DAJh
                                     <!-- Product name-->
                                     <h5 class="fw-bolder">${data1[i].Car_made} ${data1[i].Model_Name}</h5>
                                     <!-- Product price-->
+                                    <i class="fa-solid fa-chair"></i> ${data1[i].Capacity}<br>
                                     <span class="text-decoration-line-through">₹ ${(data1[i].Price)+500}</span>
                                     <b>₹ ${data1[i].Price}</b><br>
                                     ${data1[i].SpawnCode}
@@ -98,6 +99,7 @@ fetch('https://script.google.com/macros/s/AKfycbwpTWEeLHdIQisqXL_dpF9NgQExZ9DAJh
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
+                                    <i class="fa-solid fa-chair"></i> ${data2[i].Capacity}<br>
                                     <h5 class="fw-bolder">${data2[i].Car_made} ${data2[i].Model_Name}</h5>
                                     <!-- Product price-->
                                     <span class="text-decoration-line-through">₹ ${(data2[i].Price)+500}</span>
@@ -120,6 +122,7 @@ fetch('https://script.google.com/macros/s/AKfycbwpTWEeLHdIQisqXL_dpF9NgQExZ9DAJh
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
+                                    <i class="fa-solid fa-chair"></i> ${data3[i].Capacity}<br>
                                     <h5 class="fw-bolder">${data3[i].Car_made} ${data3[i].Model_Name}</h5>
                                     <!-- Product price-->
                                     <span class="text-decoration-line-through">₹ ${(data3[i].Price)+500}</span>
