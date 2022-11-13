@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>BBRP - ADD CARS</title>
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        body {
+            color: #000;
+            overflow-x: hidden;
+            height: 100%;
+            background: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/21a08c152414551.631e0a58f072f.png")no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        .card {
+            padding: 30px 40px;
+            margin-top: 60px;
+            margin-bottom: 60px;
+            border: none !important;
+            box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2)
+        }
+
+        .blue-text {
+            color: #00BCD4
+        }
+
+        .form-control-label {
+            margin-bottom: 0
+        }
+
+        input,
+        textarea,
+        button {
+            padding: 8px 15px;
+            border-radius: 5px !important;
+            margin: 5px 0px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            font-size: 18px !important;
+            font-weight: 300
+        }
+
+        input:focus,
+        textarea:focus {
+            -moz-box-shadow: none !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+            border: 1px solid #00BCD4;
+            outline-width: 0;
+            font-weight: 400
+        }
+
+        .btn-block {
+            text-transform: uppercase;
+            font-size: 15px !important;
+            font-weight: 400;
+            height: 43px;
+            cursor: pointer
+        }
+
+        .btn-block:hover {
+            color: #fff !important
+        }
+
+        button:focus {
+            -moz-box-shadow: none !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+            outline-width: 0
+        }
+    </style>
+</head>
+
+<body className='snippet-body'>
+    <div class="container-fluid px-1 py-5 mx-auto">
+        <div class="row d-flex justify-content-center">
+            <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+                <BR>
+                    <BR>
+                <div class="card" style="border-radius: 12px;">
+                    <h5 class="text-center mb-4">Add Edm Cars</h5>
+                    <img id="url" src="https://cdn.discordapp.com/attachments/1024694267320471562/1038024763160924270/image.png" style="border-radius:12px;display:none">
+                    <br>
+                    <div class="form-card" id="form">
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                    class="form-control-label px-3">Image Url<span class="text-danger">
+                                        *</span></label> <input type="text" id="picture" name="picture"
+                                    placeholder="Discord Image Url"  onchange="loadUrl()"> </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                    class="form-control-label px-3">Car Company<span class="text-danger"> *</span></label>
+                                <input type="text" id="car" name="car" placeholder="HONDA"
+                                    > </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                    class="form-control-label px-3">Car Model<span class="text-danger">
+                                        *</span></label> <input type="text" id="model" name="model" placeholder="CIVIC"
+                                    > </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                    class="form-control-label px-3">Spawn Code<span class="text-danger">
+                                        *</span></label> <input type="text" id="spawncode" name="spawncode" placeholder="exampleSpawnCode"
+                                   > </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                    class="form-control-label px-3">Seating Capacity<span class="text-danger">
+                                        *</span></label> <input type="text" id="capacity" name="capacity" placeholder="4"
+                                    > </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                    class="form-control-label px-3">Price<span class="text-danger">
+                                        *</span></label> <input type="text" id="price" name="price" placeholder="799"
+                                    > </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                    class="form-control-label px-3">Tier<span class="text-danger"> *</span></label>
+                                    <select name="tier" id="tier">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                      </select> </div>
+                            <div class="form-group col-sm-6 flex-column d-flex"> <label
+                                    class="form-control-label px-3">Stock<span class="text-danger"> *</span></label>
+                                    <select name="stock" id="stock">
+                                        <option value="✅">Available</option>
+                                        <option value="X">Not In Stock</option>
+                                      </select> </div>
+                        </div>
+                        <div class="row justify-content-between text-left">
+                            <div class="form-group col-12 flex-column d-flex"> <label
+                                    class="form-control-label px-3">Password<span
+                                        class="text-danger"> *</span></label> <input type="password" id="pass" name="pass"
+                                    placeholder="" > </div>
+                        </div>
+                        <div class="row justify-content-end">
+                            <div class="form-group col-sm-6"> <button 
+                                    class="btn-block btn-primary" onclick="op()">+ Add Car</button> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'>
+    </script>
+
+    <script>
+        // HEALER#0088
+        const clicksound = new Audio('loaded.mp3');
+        const su = new Audio('https://github.com/healer-op/paymentapi/raw/main/success.mp3');
+        function loadUrl(){
+            clicksound.play();
+            var x = document.getElementById("picture").value;
+            document.getElementById("url").src= x;
+            document.getElementById("url").style.display= "block";
+        }
+
+        function op(){
+            var picture = document.getElementById("picture").value
+            var car = document.getElementById("car").value
+            var model = document.getElementById("model").value
+            var spawncode = document.getElementById("spawncode").value
+            var capacity = document.getElementById("capacity").value
+            var price = document.getElementById("price").value
+            var tier = document.getElementById("tier").value
+            var stock = document.getElementById("stock").value
+            var pass = document.getElementById("pass").value
+
+            
+
+            var data = {
+                "picture":picture,
+                "car":car,
+                "model":model,
+                "price":price,
+                "capacity":capacity,
+                "spawncode":spawncode,
+                "teir":tier,
+                "stock":stock
+            }
+
+            var formUrl= `https://script.google.com/macros/s/AKfycbwpTWEeLHdIQisqXL_dpF9NgQExZ9DAJhg79HGqHDJjDd-Y0bPs3duQf7ERBVUooPKo/exec?action=addUser&pass=${pass}`
+
+            fetch(`${formUrl}`, {
+            method: 'POST',
+              body: JSON.stringify(data)
+            }).then(res => su.play());
+        }
+
+    </script>
+
+
+</body>
+
+</html>
